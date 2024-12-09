@@ -9,18 +9,6 @@
   <body>
     <h1>Welcome to my page!</h1>
 
-    <div class="contact-box">
-      <h3>My information</h3>
-      <ul>
-        <li>
-          Email:
-          <a href="louis8@pdx.edu">louis8@pdx.edu</a>
-        </li>
-        <li>Discord: diegobrando</li>
-        <li>League of Legends: vanitysix</li>
-      </ul>
-    </div>
-
     <nav role="navigation" aria-label="Main Navigation Page">
       <div class="navbar">
         <a href="#about-me" class="item">About Me</a>
@@ -30,31 +18,71 @@
       </div>
     </nav>
 
-    <img
-      class="selfie"
-      src="me.jpg "
-      width="300px"
-      alt="This is a picture of Louis Nguyen"
-    />
+    <div>
+      <img
+        class="selfie"
+        src="me.jpg "
+        width="300px"
+        alt="This is a picture of Louis Nguyen"
+      />
+    </div>
     <h2 id="about-me">About Me</h2>
     <p>
-      My name is Louis Nguyen. I like solve LeetCode problems and play video
-      games. I also enjoy watching a lot of anime. Re:Zero and One piece have
-      been very enjoyable so far!
+      My name is Louis Nguyen. I am a student at Portland State University and
+      am working towards a bachelors degree in computer science. I totally like
+      doing leetcode.
     </p>
 
     <h2 id="work-experience">Work Experience</h2>
-    <p>
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry's standard dummy text ever since the
-      1500s, when an unknown printer took a galley of type and scrambled it to
-      make a type specimen book. It has survived not only five centuries, but
-      also the leap into electronic typesetting, remaining essentially
-      unchanged. It was popularised in the 1960s with the release of Letraset
-      sheets containing Lorem Ipsum passages, and more recently with desktop
-      publishing software like Aldus PageMaker including versions of Lorem
-      Ipsum.
-    </p>
+
+    <div class="work-experience-boxes">
+      <div class="work-box">
+        <h3>Server</h3>
+        <h4>Larel Parc</h4>
+        <h5>Aug. 2024 - Sept. 2025</h5>
+        <ul>
+          <li>
+            Serve resident meals and provide personable service by ensuring
+            dietary accuracy, explaining menu options, answering questions, and
+            offering menu recommendations.
+          </li>
+          <li>
+            Increase accessibility by accommodating special needs and requests
+            due to the workplace being a senior retirement home
+          </li>
+          <li>Assist and provide courteous and respectful service.</li>
+        </ul>
+      </div>
+      <div class="work-box">
+        <h3>Warehouse Associate</h3>
+        <h4>Amazon</h4>
+        <h5>May 2021 - Sept. 2022</h5>
+        <ul>
+          <li>
+            Adhere to strict safety, quality, and fulfillment production
+            standards.
+          </li>
+          <li>Ensure product meets quality requirements.</li>
+          <li>Sorting and lifting items up to 50 pounds.</li>
+        </ul>
+      </div>
+      <div class="work-box">
+        <h3>Assistant Cook</h3>
+        <h4>Panda Express</h4>
+        <h5>Feb. 2017 - Aug. 2018</h5>
+        <ul>
+          <li>
+            Worked effectively and efficiently in a team environment able to
+            deal with difficult rush hours
+          </li>
+          <li>Maintained an effective and reliable workforce</li>
+          <li>
+            Is able to be flexible and work in extra roles like prepping foods,
+            dish washing, stocking/unloading, opening/closing store, etc.
+          </li>
+        </ul>
+      </div>
+    </div>
 
     <h2 id="projects">Projects</h2>
     <p>
@@ -68,6 +96,100 @@
       publishing software like Aldus PageMaker including versions of Lorem
       Ipsum.
     </p>
+    <h2 id="contact">Contact Me</h2>
+
+    <div class="contact-box">
+      <ul>
+        <li>
+          Email:
+          <a href="louis8@pdx.edu">louis8@pdx.edu</a>
+        </li>
+        <li>Discord: diegobrando</li>
+        <li>League of Legends: vanitysix</li>
+      </ul>
+    </div>
+
+    <form action="contact-form" method="post">
+      <fieldset>
+        <legend>Contact Form</legend>
+
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required />
+        <br />
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" required />
+        <br />
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" required></textarea>
+        <br />
+        <button type="submit">Send Message</button>
+      </fieldset>
+    </form>
+
+    <div class="form-container">
+      <form class="signup-form">
+        <h2>Sign Up Form</h2>
+        <p>Fill up the items in the form below.</p>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" value="Caterina Paun" />
+        </div>
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" value="caterina" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value="caterina@pdx.edu"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" value="******" />
+        </div>
+        <div class="form-group">
+          <label for="dob">Date of birth:</label>
+          <input type="date" id="dob" name="dob" value="2022-01-01" />
+        </div>
+        <div class="pronouns-section">
+          <fieldset>
+            <legend>Preferred Pronouns</legend>
+            <label class="radio-label"
+              ><input type="radio" name="pronouns" value="she-her" />
+              She/her</label
+            ><br />
+            <label class="radio-label"
+              ><input type="radio" name="pronouns" value="he-him" />
+              He/him</label
+            ><br />
+            <label class="radio-label"
+              ><input type="radio" name="pronouns" value="they-them" />
+              They/them</label
+            ><br />
+            <label class="radio-label"
+              ><input type="radio" name="pronouns" value="no-preference" /> I
+              prefer not to say</label
+            >
+          </fieldset>
+        </div>
+
+        <div class="button-group">
+          <button type="submit" class="submit-button">Submit</button>
+          <button type="reset" class="reset-button">Reset</button>
+        </div>
+      </form>
+    </div>
+
+    <footer>
+      <p>
+        Or email me at
+        <a href="mailto:youremail@example.com">youremail@example.com</a>
+      </p>
+    </footer>
 
     <script src="script.js"></script>
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>

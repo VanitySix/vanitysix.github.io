@@ -4,6 +4,7 @@
   --black: #080808;
   --white: #fefefe;
   --gray: #b5b4c2;
+  --darkgray: #b5b4c217;
 
   --cyan: #1c609c;
   --violetred: #a2106d;
@@ -23,27 +24,16 @@ html {
 
 .selfie {
   flex-shrink: 0;
-  border-radius: 10px;
+  border-radius: 80px;
   float: left;
-  margin-left: 4%;
-  margin-top: 35px;
-}
-
-/* Media query for smaller screens */
-@media (max-width: 600px) {
-  #about-me {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .selfie {
-    margin: 0 auto 20px;
-  }
+  margin-top: 0px;
+  padding: 50px;
+  display: grid;
 }
 
 body {
   font-family: "Georgia", sans-serif;
-  font-size: 1.2em;
+  font-size: 1.4em;
   color: var(--black);
   background-color: var(--gray);
   line-height: 2;
@@ -57,13 +47,14 @@ p {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 3.5em;
   text-align: center;
   color: var(--black);
 }
 
 h2 {
   margin-left: 20%;
+  font-size: 2.2em;
 }
 
 .navbar {
@@ -73,8 +64,10 @@ h2 {
   display: flex;
   justify-content: center;
   padding: 5px 0;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0px auto;
+  z-index: 1000;
+  flex-wrap: wrap;
 }
 
 .item {
@@ -91,4 +84,130 @@ h2 {
 .item:hover {
   background-color: var(--orange);
   transform: scale(0.9);
+}
+/*Work experience section*/
+.work-experience-boxes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 30%; /* Centers the container */
+  align-items: start; /* Aligns items to the top */
+}
+
+.work-box {
+  border: 3px solid var(--black);
+  padding: 15px;
+  border-radius: 8px;
+  position: relative;
+  z-index: 1000;
+  background-color: white;
+}
+.work-box h3 {
+  margin-bottom: 0px;
+  margin-top: 0;
+  font-size: 1.3em;
+}
+
+.work-box h4 {
+  margin-top: 0;
+}
+
+.work-box h5 {
+  margin-top: -30px;
+  margin-right: 20%;
+  color: #00000098;
+}
+
+.work-box ul {
+  margin-top: -30px;
+}
+
+@media (max-width: 600px) {
+  .work-experience-boxes {
+    grid-template-columns: 1fr; /* Stack the boxes vertically on smaller screens */
+  }
+}
+
+.contact-box {
+  font-family: "Georgia", sans-serif;
+  font-size: 1.2em;
+  color: var(--black);
+  background-color: var(--gray);
+  line-height: 2;
+  padding: 0px;
+  border-radius: 10px;
+  margin-left: 20%;
+}
+
+/*Form */
+form[action="contact-form"] {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* -------------Code for exercise 03-form---------------*/
+form h2 {
+  margin-bottom: 5px;
+}
+
+form p {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.signup-form {
+  width: 100%;
+  border: 1px solid var(--black);
+  padding: 20px;
+  border-radius: 5px;
+  background-color: var(--white);
+  text-align: left;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 150px;
+}
+
+.signup-form h2 {
+  font-size: 1.5em;
+  margin-bottom: 1px;
+}
+
+.signup-form p {
+  margin-bottom: 15px;
+  color: var(--gray);
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  width: 150px;
+  text-align: left;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+label {
+  width: 100px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.signup-form input[type="name"],
+.signup-form input[type="email"],
+.signup-form input[type="subject"],
+.signup-form input[type="message"] {
+  width: 240px;
+  padding: 8px;
+  border: 1px solid var(--gray);
+  border-radius: 3px;
 }

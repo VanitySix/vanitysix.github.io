@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="styles.css" />
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "nLKbvKhcy8EF_RtFo",
+        });
+      })();
+    </script>
+
+    <script src="script.js"></script>
   </head>
   <body>
     <h1>Welcome to my page!</h1>
@@ -29,8 +44,13 @@
     <h2 id="about-me">About Me</h2>
     <p>
       My name is Louis Nguyen. I am a student at Portland State University and
-      am working towards a bachelors degree in computer science. I totally like
-      doing leetcode.
+      am working towards a bachelors degree in computer science. Although I'm
+      still exploring my specific area of interest, I am particularly drawn to
+      fields like data science and game development. Like many others, I started
+      by playing video games and developed a liking towards it, because of how
+      fun it was it inspired me to create my own games. The experience of
+      engaging with immersive worlds and quirky cool gameplay is amazing unlike
+      anyting else.
     </p>
 
     <h2 id="work-experience">Work Experience</h2>
@@ -96,102 +116,62 @@
       publishing software like Aldus PageMaker including versions of Lorem
       Ipsum.
     </p>
-    <h2 id="contact">Contact Me</h2>
 
-    <div class="contact-box">
-      <ul>
-        <li>
-          Email:
-          <a href="louis8@pdx.edu">louis8@pdx.edu</a>
-        </li>
-        <li>Discord: diegobrando</li>
-        <li>League of Legends: vanitysix</li>
-      </ul>
-    </div>
+    <section id="contact" class="container">
+      <h2>Contact Me</h2>
+      <div class="contact-box">
+        <ul>
+          <li>
+            Email:
+            <a href="mailto:louis8@pdx.edu">louis8@pdx.edu</a>
+          </li>
+          <li>Github: <a href="https://github.com/VanitySix">VanitySix</a></li>
+          <li>Discord: diegobrando</li>
+          <li>League of Legends: vanitysix</li>
+        </ul>
+      </div>
 
-    <form action="contact-form" method="post">
-      <fieldset>
-        <legend>Contact Form</legend>
+      <div class="form-container">
+        <form class="signup-form">
+          <h2>Sign Up Form</h2>
+          <p>Fill up the items in the form below.</p>
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input
+              type="name"
+              id="name"
+              name="name"
+              value="John Wick"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="username">Email:</label>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              value="JohnWick@gmail.com"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <input
+              type="message"
+              id="message"
+              name="message"
+              value="Text Message."
+              required
+            />
+          </div>
 
-        <label for="name">Your Name</label>
-        <input type="text" id="name" name="name" required />
-        <br />
-        <label for="email">Your Email</label>
-        <input type="email" id="email" name="email" required />
-        <br />
-        <label for="message">Your Message</label>
-        <textarea id="message" name="message" required></textarea>
-        <br />
-        <button type="submit">Send Message</button>
-      </fieldset>
-    </form>
-
-    <div class="form-container">
-      <form class="signup-form">
-        <h2>Sign Up Form</h2>
-        <p>Fill up the items in the form below.</p>
-        <div class="form-group">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" value="Caterina Paun" />
-        </div>
-        <div class="form-group">
-          <label for="username">Username:</label>
-          <input type="text" id="username" name="username" value="caterina" />
-        </div>
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value="caterina@pdx.edu"
-          />
-        </div>
-        <div class="form-group">
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="password" value="******" />
-        </div>
-        <div class="form-group">
-          <label for="dob">Date of birth:</label>
-          <input type="date" id="dob" name="dob" value="2022-01-01" />
-        </div>
-        <div class="pronouns-section">
-          <fieldset>
-            <legend>Preferred Pronouns</legend>
-            <label class="radio-label"
-              ><input type="radio" name="pronouns" value="she-her" />
-              She/her</label
-            ><br />
-            <label class="radio-label"
-              ><input type="radio" name="pronouns" value="he-him" />
-              He/him</label
-            ><br />
-            <label class="radio-label"
-              ><input type="radio" name="pronouns" value="they-them" />
-              They/them</label
-            ><br />
-            <label class="radio-label"
-              ><input type="radio" name="pronouns" value="no-preference" /> I
-              prefer not to say</label
-            >
-          </fieldset>
-        </div>
-
-        <div class="button-group">
-          <button type="submit" class="submit-button">Submit</button>
-          <button type="reset" class="reset-button">Reset</button>
-        </div>
-      </form>
-    </div>
-
-    <footer>
-      <p>
-        Or email me at
-        <a href="mailto:youremail@example.com">youremail@example.com</a>
-      </p>
-    </footer>
-
-    <script src="script.js"></script>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+          <div class="button-group">
+            <button type="submit" class="submit-button">Submit</button>
+            <button type="reset" class="reset-button">Reset</button>
+          </div>
+        </form>
+      </div>
+    </section>
   </body>
 </html>

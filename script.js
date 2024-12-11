@@ -4,8 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const sendMail = (event) => {
-  // Page wont refresh when user submits
-  //event.preventDefault();
+  event.preventDefault();
 
   const user_data = {
     name: document.getElementById("name").value.trim(),
